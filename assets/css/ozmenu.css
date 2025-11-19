@@ -1,0 +1,96 @@
+body {
+    background-color: rgba(87, 79, 236, .08) !important;
+    font-size: 14px;
+}
+
+body.hide-scrolling {
+    overflow-y: hidden;
+}
+
+/* Menu */
+.ozmenu ul.ozmenu-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0px;
+    gap: 30px;
+}
+
+.ozmenu ul.ozmenu-nav>li {
+    position: relative;
+    float: left;
+    width: auto;
+}
+
+.ozmenu ul.ozmenu-nav>li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.ozmenu ul li.dropdownitem>a:after {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    float: right;
+    background-color: #000;
+    content: "";
+    margin: 2px 0px 0px 3px;
+    -webkit-mask-image: url('data:image/svg+xml;charset=utf-8,<svg width="12px" height="12px" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');
+    mask-image: url('data:image/svg+xml;charset=utf-8,<svg width="12px" height="12px" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.ozmenu ul li .dropdown {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    width: 230px;
+}
+
+
+
+.ozmenu ul.ozmenu-nav .dropdown ul li {
+    float: left;
+    width: 100%;
+}
+
+.ozmenu ul.ozmenu-nav .dropdown ul li a {
+    padding: 8px 0px;
+}
+
+.ozmenu ul li.dropdownitem ul li a,
+.ozmenu ul li.dropdownitem ul li .dropdown ul li a {
+    border-bottom: 1px dotted #eee;
+}
+
+.ozmenu ul li.dropdownitem ul li:last-child a,
+.ozmenu ul li.dropdownitem ul li .dropdown ul li:last-child a {
+    border-bottom: 0px !important;
+}
+
+/* Dropdown + Dropdown */
+.ozmenu ul li.dropdownitem ul li a:before,
+.ozmenu ul li.dropdownitem ul li .nav-dropdown ul li a:after {
+    display: none !important;
+}
+
+.ozmenu ul li.dropdownitem ul li .nav-dropdown ul li:last-child a {
+    border-bottom: 0px !important;
+}
+
+.ozmenu ul li.dropdownitem .dropdown ul li.dropdownitem {
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+/* Responsive Menu */
+.menu-close,
+.menu-open {
+    display: none;
+}
+

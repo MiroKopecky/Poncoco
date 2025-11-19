@@ -1,0 +1,693 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    background: #FFFFFF !important;
+    color: white;
+    margin: 0;
+}
+
+section {
+    background-color: transparent;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+section .title {
+    margin: 0;
+    font-size: 55px;
+    line-height: 125%;
+}
+
+a.link-button {
+    background-color: #000000 !important;
+    border-radius: 45px !important;
+    display: flex;
+    gap: 10px;
+    font-weight: 200;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    margin-left: 10px !important;
+    transition: 0.3s;
+    color: white !important;
+}
+
+a.link-button {
+    font-size: 20px;
+    font-weight: 200;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin-bottom: 0;
+    align-items: baseline;
+    padding: 18px 0 20px;
+}
+
+a.link-button:hover {
+    background-color: #303030 !important;
+    color: white !important;
+}
+
+a.link-button span {
+    font-family: 'Satoshi', sans-serif;
+    transition: 0.3s;
+}
+
+a.link-button:hover > span {
+    transform: translateX(5px);
+}
+
+.ozmenu.active .ozmenu-nav {
+    background-color: #192033 !important;
+}
+
+.ozmenu ul.ozmenu-nav>li a.link-button:hover {
+    background-color: #0d52dc !important;
+    color: white !important;
+}
+
+#header .menu .item a.link-button::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+}
+
+.show {
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.hide {
+    opacity: 0;
+    transition: 0.4s;
+}
+
+@media only screen and (min-width: 2150px) {
+    section {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #menu-mobile .ozmenu-nav a.link-button {
+        margin-top: 10px;
+        margin-left: 0 !important;
+    }
+    section .title {
+        font-size: 42px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#header {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    color: white;
+    transition: 0.5s;
+    border-radius: 150px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 320px;
+    margin: 20px 0;
+}
+
+#header .menu {
+    align-self: center;
+}
+
+#header .menu .item a {
+    color: white !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    line-height: normal !important;
+    font-weight: normal;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#header .menu .item a::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: white;
+    transition: 0.15s;
+}
+
+#header .menu .item a:hover::after {
+    width: 100%;
+}
+
+.menu-close .close {
+    background-color: white !important;
+}
+
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+
+#hero {
+    height: 45vh;
+    position: relative;
+    bottom: 0;
+    padding-top: 25vh;
+    background-color: rgba(121, 88, 72, 0.7);
+    border-bottom-left-radius: 150px;
+    overflow: hidden;
+    background-image: url("/assets/img/Group.png"); /* The image used */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    text-align: center;
+}
+
+#hero .main {
+    padding-top: 5vh;
+}
+
+#hero .main .title {
+    font-size: 128px;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+    line-height: 125%;
+    letter-spacing: -17px;
+}
+
+#hero .main .text {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 7px;
+    color: #0000007D;
+}
+
+#hero a.link-button {
+    position: absolute;
+    right: 10vw;
+    bottom: 80px;
+    margin-right: 0 !important;
+}
+
+#hero .eye-letter {
+    position: relative;
+    overflow: hidden;
+}
+
+#hero .eye {
+    position: absolute;
+    width: 22px;
+    height: 27px;
+    background-color: black;
+    border-radius: 50%;
+    top: 34px;
+    left: 36px;
+    pointer-events: none;
+    transition: transform 0.05s ease, width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+}
+
+@media only screen and (max-width: 767px) {
+    #hero {
+        border-bottom-left-radius: 70px;
+    }
+    #hero .main .title {
+        font-size: 80px;
+        letter-spacing: -12px;
+    }
+    #hero .main .text {
+        font-size: 20px;
+        letter-spacing: 6px;
+        line-height: 24px;
+    }
+    #hero a.link-button {
+        font-size: 18px;
+        padding: 12px 0 14px;
+        bottom: 50px;
+        right: 5vw;
+    }
+    #hero .eye {
+        width: 19px;
+        height: 24px;
+        background-color: black;
+        border-radius: 50%;
+        top: 22px;
+        left: 24px;
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+
+#products {
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+#products h1 {
+    font-weight: 600;
+    font-size: 64px;
+    text-align: center;
+    vertical-align: middle;
+    color: #292F36;
+}
+
+#products h4 {
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 6px;
+    text-align: center;
+    vertical-align: middle;
+    color: #D4D4D4;
+    padding: 0 0 20px;
+}
+
+#products .imgs {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+#products .imgs img {
+    width: 250px;
+}
+
+#products img.bam {
+    position: absolute;
+    top: 10%;
+    right: 3%;
+}
+
+#products img.bi {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+
+#products img.be1 {
+    position: absolute;
+    top: 70%;
+    left: 7%;
+}
+
+#products img.be2 {
+    position: absolute;
+    top: 85%;
+    right: 12%;
+}
+
+@media only screen and (max-width: 992px) {
+    #products .imgs img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #products {
+        padding: 70px 2%;
+    }
+    #products h1 {
+        font-size: 36px;
+    }
+    #products h4 {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+    #products .imgs {
+        gap: 15px;
+    }
+    #products img.bam {
+        top: 5%;
+    }
+    #products img.bi {
+        top: 33%;
+    }
+    #products img.be1 {
+        top: 90%;
+    }
+    #products img.be2 {
+        top: 85%;
+        right: 8%;
+    }
+    #products img.bam, #products img.bi, #products img.be1, #products img.be2 {
+        transform: scale(0.5);
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Pics
+--------------------------------------------------------------*/
+
+#pics {
+    padding: 100px 0 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+#pics img {
+    width: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 767px) {
+    #pics {
+        padding: 50px 0 0;
+    }
+    #pics img {
+        width: 200%;
+        transform: translateX(-25%);
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+    padding: 100px 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #A68E82;
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 1%;
+}
+
+#footer p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+    #footer {
+        padding: 100px 5%;
+        font-size: 16px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+  # Form
+  --------------------------------------------------------------*/
+
+#customForm {
+    background: #192033;
+    padding-top: 15vh;
+}
+
+#customForm h1 {
+	padding-bottom: 50px;
+	font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    line-height: 52px;
+	text-decoration: underline;
+    text-decoration-color: #65AB99;
+    text-decoration-thickness: 9px;
+    margin: 0;
+    padding-top: 150px;
+}
+
+#customForm label {
+	color: white;
+	font-size: 16px;
+}
+
+#customForm input[type=text], #customForm input[type=number], #customForm input[type=email], #customForm select, #customForm textarea {
+	width: -webkit-fill-available;
+	background: #192033;
+	border: 1px solid #898989;
+	border-radius: 25px;
+	padding: 12px 20px;
+    margin-top: 10px;
+	margin-bottom: 30px;
+	font-size: 16px;
+	color: white;
+}
+
+/* Chrome, Safari, Edge, Opera */
+#customForm input::-webkit-outer-spin-button, #customForm input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#customForm input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#customForm select {
+	-webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    background-image: url('../img/down-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: calc(100% - 16px);
+    cursor: pointer;
+}
+
+#customForm ::placeholder {
+	color: #898989;
+	font-style: italic;
+}
+
+#customForm textarea {
+	resize: none;
+	height: 200px;
+}
+
+#customForm #scholarshipSection {
+	padding-bottom: 30px;
+}
+
+#customForm #scholarshipSection label:first-child {
+	display: block;
+    padding-bottom: 10px;
+}
+
+#customForm #scholarshipSection label:not(:first-child), #customForm #scholarshipSection input {
+    cursor: pointer;
+}
+
+#customForm .data label {
+	display: inline;
+    cursor: pointer;
+}
+
+#customForm .data input {
+    cursor: pointer;
+}
+
+#customForm .data p {
+	margin-bottom: 0;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#customForm .data div label {
+    text-transform: none;
+    padding-left: 5px;
+}
+
+#customForm .but {
+	width: 100%;
+	text-align: center;
+    display: flex;
+    justify-content: start;
+    gap: 24px;
+    padding-top: 80px;
+    font-size: 16px;
+}
+
+#customForm .but button {
+    background: #1263ff;
+    color: white;
+    font-size: 16px;
+    padding: 10px 30px;
+    transition: 0.3s;
+    font-weight: bold;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    text-transform: uppercase;
+}
+
+#customForm .but button:hover {
+    background: #0d52dc;
+    transition: 0.3s;
+}
+
+#customForm .but .cancel {
+    background: #acd3ff;
+    color: #192033;
+}
+
+#customForm .but .cancel:hover {
+    background: #90b8e7;
+}
+
+#successMessage {
+	padding-top: 200px;
+	padding-bottom: 50vh;
+    font-size: 18px;
+}
+
+#successMessage div {
+	text-align: center;
+	padding: 30px 60px;
+	width: fit-content;
+	margin: 0 auto;
+    border-radius: 25px;
+    background-color: #acd3ff;
+    color: #192033;
+}
+
+#successMessage div .h1 {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+#successMessage div p {
+	margin-bottom: 0;
+}
+
+#successMessage .back{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#successMessage  a {
+    color: #192033;
+    text-decoration: none;
+}
+
+#successMessage a:hover {
+    text-decoration: underline;
+}
+
+#failureMessage {
+    font-size: 18px;
+    padding: 30px 60px;
+    margin: 200px auto 500px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #acd3ff;
+    color: #192033;
+    width: fit-content;
+}
+
+#refunds {
+    padding-bottom: 0;
+}
+
+#refunds h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#refunds h2 {
+    padding-top: 20px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #4ec8ca;
+}
+
+#refunds p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+#refunds a {
+    color: white;
+}
+
+#motivationSection p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: white;
+    padding-left: 8px;
+    margin: 10px 0 0;
+}
+
+#motivationSection div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#motivationSection div textarea {
+    margin: 0;
+}
+
+#motivationSection div img {
+    width: 275px;
+}
+
+@media (min-width: 2150px) {
+ #customForm {
+    padding-left: 20%;
+    padding-right: 20%;
+ }
+}
+
+@media (max-width: 767px) {
+	#customForm h1 {
+		font-size: 35px;
+		text-decoration-thickness: 6px;
+	}
+    #motivationSection p {
+        font-size: 13px;
+        line-height: 1.4;
+        color: white;
+        padding-left: 0px;
+    }
+    #motivationSection div {
+        flex-direction: column;
+    }
+}

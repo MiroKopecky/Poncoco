@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <title>CodeBridge College</title>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="CodeBridge College" name="description">
+    <meta content="data, school, courses" name="keywords">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <!-- Font -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/ozmenu.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" data-aos="fade-down">
+        <div class="image" id="header-logo">
+            <a href="index.html"><img src="assets/img/logo.png" id="header-logo-image"></a>
+        </div>
+        <div class="menu">
+            <!-- ozMenu -->
+            <div class="menu-open"><span class="open"></span></div>
+            <div id="menu-mobile" class="ozmenu mt-4">
+                <div class="menu-close"><span class="close"></span></div>
+                <ul class="ozmenu-nav">
+                    <li class="item"><a href="index.html#courses">Courses</a></li>
+                    <li class="item"><a href="index.html#reviews">Reviews</a></li>
+                    <li class="item"><a href="index.html#lecturers">Lecturers</a></li>
+                    <li class="item"><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <!-- /ozMenu -->
+        </div>
+    </header>
+
+    <!-- ======= Form ======= -->
+    <section id="customForm">
+        <form id="form" data-aos="fade-up">
+            <div>
+                <label for="firstName">*First name</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="">
+            </div>
+    
+            <div>
+                <label for="familyName">*Family name</label>
+                <input type="text" id="familyName" name="familyName" required placeholder="">
+            </div>
+    
+            <div>
+                <label for="age">*Age</label>
+                <input type="number" id="age" name="age" required placeholder="">
+            </div>
+
+            <div>
+                <label for="sex">*Sex</label>
+                <select id="sex" name="sex" required>
+                    <option value="" selected disabled hidden></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+    
+            <div>
+                <label for="email">*Email</label>
+                <input type="email" id="email" name="email" required placeholder="">
+            </div>
+    
+            <div>
+                <label for="mobileNumber">*Mobile Number</label>
+                <input type="text" id="mobileNumber" name="mobileNumber" required placeholder="">
+            </div>
+    
+            <div>
+                <label for="occupation">*Occupation</label>
+                <select id="occupation" name="occupation" required>
+                    <option value="" selected disabled hidden></option>
+                    <option value="Student">Student</option>
+                    <option value="PhD Student">PhD Student</option>
+                    <option value="Scientist">Scientist</option>
+                    <option value="Public sector">Public sector</option>
+                    <option value="Private sector">Private sector</option>
+                </select>
+            </div>
+
+            <div id="scholarshipSection" style="display: none;">
+                <label for="schoolarship">*Would you like to apply for a scholarship? The scholarship covers 100% of the SDS costs! (Scholarship is offered exclusively to students)</label>
+                <input type="radio" id="schoolarshipYes" name="schoolarship" value="Yes">
+                <label class="option" for="schoolarshipYes">Yes</label><br>
+                <input type="radio" id="schoolarshipNo" name="schoolarship" value="No">
+                <label class="option" for="schoolarshipNo">No</label><br>
+            </div>
+
+            <div id="motivationSection" style="display: none;">
+                <label for="motivation">*Describe your motivation for attending the Winter Data School (250-500 words)</label><br>
+                <p>
+                    Please refrain from using AI tools to generate your motivational statement. We value your own words the most and your application is evaluated based on - your MOTIVATION.<br>
+                    Writing your motivational statement in your own words demonstrates that you put effort into presenting a strong case for yourself as the ideal candidate deserving of the scholarship.<br>
+                    Motivational statements written by an AI tool will be dismissed, and you will NOT be offered a second chance at the scholarship.
+                </p>
+                <div>
+                    <textarea type="" id="motivation" name="motivation" placeholder=""></textarea>
+                    <img src="assets/img/meme.png">
+                </div>
+            </div>
+    
+            <div>
+                <label for="workplace">*Employer/University (provide full name)</label>
+                <input type="text" id="workplace" name="workplace" required placeholder="">
+            </div>
+    
+            <div>
+                <label for="python">*Experience with Python programming</label>
+                <select id="python" name="python" required>
+                    <option value="" selected disabled hidden></option>
+                    <option value="I haven't written any code in recent years">"I haven't written any code in recent years"</option>
+                    <option value='wrote Print("Hello World!");'>wrote Print("Hello World!");</option>
+                    <option value="beginner">beginner</option>
+                    <option value="intermediate">intermediate</option>
+                    <option value="advanced">advanced</option>
+                    <option value="I am master of snakes">"I am master of snakes"</option>
+                </select>
+            </div>
+    
+            <div>
+                <label for="statistics">*Experience with Statistics</label>
+                <select id="statistics" name="statistics" required>
+                    <option value="" selected disabled hidden></option>
+                    <option value="no experience">no experience</option>
+                    <option value="I know what p-value is">"I know what p-value is"</option>
+                    <option value="intermediate">intermediate</option>
+                    <option value="advanced">advanced</option>
+                    <option value="expert">expert</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="courses">*Select course to register</label>
+                <select id="courses" name="courses" required>
+                    <option value="" selected disabled hidden></option>
+                    <script>
+                        // Retrieve the JSON data from the script tag
+                        const jsonData = JSON.parse(document.getElementById('json-data').textContent);
+                        const coursesSelect = document.getElementById('courses');
+
+                        // Populate the select element with options
+                        jsonData.forEach(course => {
+                            const option = document.createElement('option');
+                            option.value = `${course.title} (${course.date})`;
+                            option.textContent = `${course.title} (${course.date})`;
+                            option.dataset.id = course.id; // Add course ID as a dataset attribute
+                            coursesSelect.appendChild(option);
+                        });
+
+                        // Get courseId from the URL
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const courseId = urlParams.get('courseId');
+
+                        // Set the selected option based on the courseId
+                        if (courseId) {
+                            const options = coursesSelect.options;
+                            for (let i = 0; i < options.length; i++) {
+                                if (options[i].dataset.id === courseId) {
+                                    coursesSelect.selectedIndex = i;
+                                    break;
+                                }
+                            }
+                        }
+                    </script>
+                </select>
+            </div>
+    
+            <div class="data">
+                <div>
+                    <input type="checkbox" id="confirm" name="confirm" required>
+                    <label for="confirm">I confirm that all information I provided in the form is correct</label>
+                </div>
+            </div>
+    
+            <div class="but">
+                <button class="cancel" onclick="history.back()">Back</button>
+                <button type="submit">Send</button>
+            </div>
+    
+            </form>
+    </section>
+
+    <div id="successMessage" style="display: none;">
+        <div>
+            <p class="h1">Thank you!</p>
+            <p>Your registration was succesfull!<br>We've sent you a confirmation email.</p>
+            <p>Check your inbox<br><i>(and maybe your spam folder, just in case).</i></p>
+            <p class="back"><a href=".">Back to main page →</a></p>
+        </div>
+    </div>
+    <p id="failureMessage" style="display: none;">Error:( Please try again later.</p>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <p><span id="footerYear"></span> &copy; All rights reserved</p>
+        <div class="links">
+            <p>CodeBridge College</p>
+        </div>
+        <a href="https://m-mwebsites.github.io/MandM/">MADE BY <b>M&M</b></a>
+    </footer>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- JS Files -->
+    <script src="assets/js/ozmenu.js"></script>
+    <script src="assets/js/form.js"></script>
+
+</body>
+
+</html>
