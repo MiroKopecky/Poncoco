@@ -177,7 +177,7 @@ a.link-button:hover > span {
     background-color: rgba(121, 88, 72, 0.7);
     border-bottom-left-radius: 150px;
     overflow: hidden;
-    background-image: url("/assets/img/Group.png"); /* The image used */
+    background-image: url("../img/Group.png"); /* The image used */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
